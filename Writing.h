@@ -25,21 +25,21 @@ void Writing::fileWriting(string file, Reading& content) {
 
 void Writing::wordsCounter(string file, Reading& content) {
 	ofstream MyFile(file, std::ios::app);
-	MyFile << "[->] Кількість слів у файлі: " << content.getCountOfWords() << endl;
+	MyFile << "[->] РљС–Р»СЊРєС–СЃС‚СЊ СЃР»С–РІ Сѓ С„Р°Р№Р»С–: " << content.getCountOfWords() << endl;
 	MyFile << content.getNormalLines() << endl;
 	MyFile.close();
 }
 
 void Writing::writeModifyText(string file, Reading& content) {
 	ofstream MyFile(file, std::ios::app);
-	MyFile << "[->] Модифікований текст без зайвих пробілів: " << endl;
+	MyFile << "[->] РњРѕРґРёС„С–РєРѕРІР°РЅРёР№ С‚РµРєСЃС‚ Р±РµР· Р·Р°Р№РІРёС… РїСЂРѕР±С–Р»С–РІ: " << endl;
 	MyFile << content.getModifyString() << endl;
 	MyFile.close();
 }
 
 void Writing::writeMaxVowelsWord(string file, Reading& content) {
 	ofstream MyFile(file, std::ios::app);
-	MyFile << "[->] Cлово з найбільшою кількість голосних літер: " << endl;
+	MyFile << "[->] CР»РѕРІРѕ Р· РЅР°Р№Р±С–Р»СЊС€РѕСЋ РєС–Р»СЊРєС–СЃС‚СЊ РіРѕР»РѕСЃРЅРёС… Р»С–С‚РµСЂ: " << endl;
 	MyFile << content.findWordWithMostVowels(file)  << endl;
 	MyFile.close();
 }
