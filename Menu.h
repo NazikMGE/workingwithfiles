@@ -32,14 +32,14 @@ void Menu::mainMenu() {
 
 	int choice = 0;
 	cout << " -------------------------------------------------------- " << endl;
-	cout << "¦     1. [~] Записати інформацію у файл              [~] ¦" << endl;
-	cout << "¦     2. [~] Підрахувати кількість слів              [~] ¦" << endl;
-	cout << "¦     3. [~] Видалити слов з найб кіл голосних літер [~] ¦" << endl;
-	cout << "¦     4. [~] Видалити непотрібні пробіли             [~] ¦" << endl;
-	cout << "¦     5. [~] Вихід                                   [~] ¦" << endl;
+	cout << "В¦     1. [~] Р—Р°РїРёСЃР°С‚Рё С–РЅС„РѕСЂРјР°С†С–СЋ Сѓ С„Р°Р№Р»              [~] В¦" << endl;
+	cout << "В¦     2. [~] РџС–РґСЂР°С…СѓРІР°С‚Рё РєС–Р»СЊРєС–СЃС‚СЊ СЃР»С–РІ              [~] В¦" << endl;
+	cout << "В¦     3. [~] Р’РёРґР°Р»РёС‚Рё СЃР»РѕРІ Р· РЅР°Р№Р± РєС–Р» РіРѕР»РѕСЃРЅРёС… Р»С–С‚РµСЂ [~] В¦" << endl;
+	cout << "В¦     4. [~] Р’РёРґР°Р»РёС‚Рё РЅРµРїРѕС‚СЂС–Р±РЅС– РїСЂРѕР±С–Р»Рё             [~] В¦" << endl;
+	cout << "В¦     5. [~] Р’РёС…С–Рґ                                   [~] В¦" << endl;
 	cout << " -------------------------------------------------------- " << endl;
 
-	cout << "	• Виберіть пункт із списку: ";
+	cout << "	вЂў Р’РёР±РµСЂС–С‚СЊ РїСѓРЅРєС‚ С–Р· СЃРїРёСЃРєСѓ: ";
 	cin >> choice;
 	system("cls");
 	if (choice == 1) {
@@ -49,17 +49,17 @@ void Menu::mainMenu() {
 	}
 	if (choice == 2) {
 		read_file.countOfWords(getFileInput());
-		cout << "[->] Кількість слів у файлі: " << read_file.getCountOfWords() << endl;
+		cout << "[->] РљС–Р»СЊРєС–СЃС‚СЊ СЃР»С–РІ Сѓ С„Р°Р№Р»С–: " << read_file.getCountOfWords() << endl;
 		write_file.wordsCounter(getFileOutput(), read_file);
 	}
 	if (choice == 3) {
-		cout << "Слово з найбільшою кількістю голосних: ";
+		cout << "РЎР»РѕРІРѕ Р· РЅР°Р№Р±С–Р»СЊС€РѕСЋ РєС–Р»СЊРєС–СЃС‚СЋ РіРѕР»РѕСЃРЅРёС…: ";
 		cout << read_file.findWordWithMostVowels(getFileInput());
 		write_file.writeMaxVowelsWord(getFileOutput(), read_file);
 	}
 	if (choice == 4) {
 		read_file.modifyString(getFileInput());
-		cout << "[->] Модифікований текст без зайвих пробілів: \n" << endl;
+		cout << "[->] РњРѕРґРёС„С–РєРѕРІР°РЅРёР№ С‚РµРєСЃС‚ Р±РµР· Р·Р°Р№РІРёС… РїСЂРѕР±С–Р»С–РІ: \n" << endl;
 		cout << read_file.getModifyString();
 		write_file.writeModifyText(getFileOutput(), read_file);
 	}
